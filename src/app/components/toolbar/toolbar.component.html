@@ -1,4 +1,4 @@
 <mat-toolbar color="primary" class="mat-elevation-z2">
-  <button [style.marginRight]="'4px'" (click)="back()" *ngIf="backEnable" mat-icon-button><mat-icon>arrow_back</mat-icon></button>
+  <button [style.marginRight]="'4px'" routerLink="/" *ngIf="backEnable" mat-icon-button><mat-icon>arrow_back</mat-icon></button>
   <span>{{ title }}</span>
 </mat-toolbar>

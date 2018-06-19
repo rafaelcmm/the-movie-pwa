@@ -7,7 +7,7 @@ import { ResultPageComponent } from './pages/result-page/result-page.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'movie/:id', component: DetailsPageComponent },
-  { path: 'movie/search/:filter', component: ResultPageComponent }
+  { path: 'movie/search/:search', component: ResultPageComponent }
 ];
 
 @NgModule({

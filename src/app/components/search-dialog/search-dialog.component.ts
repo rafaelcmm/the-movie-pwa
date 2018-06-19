@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef, MatSnackBar } from '@angular/material';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-search-dialog',
@@ -8,11 +9,12 @@ import { MatDialogRef, MatSnackBar } from '@angular/material';
 })
 export class SearchDialogComponent implements OnInit {
 
-  filter: string;
+  fill: string;
 
   constructor(
     private ref: MatDialogRef<SearchDialogComponent>,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private _location: Location
   ) { }
 
   ngOnInit() {
@@ -20,6 +22,7 @@ export class SearchDialogComponent implements OnInit {
 
   search() {
     this.ref.close();
+    this._location.go(`movies/search/${this.fill}`);
   }
 
 }

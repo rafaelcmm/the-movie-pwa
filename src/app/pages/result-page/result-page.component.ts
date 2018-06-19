@@ -22,10 +22,7 @@ export class ResultPageComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) {
-    this.router.routeReuseStrategy.shouldReuseRoute = function () {
-      return false;
-    }
-    this.filter = this.route.snapshot.paramMap.get('filter');
+    this.filter = this.route.snapshot.paramMap.get('search');
     this._movieService.searchMovie(this.filter).subscribe(movies => this.movies = movies.results);
     this.title = `Results for "${this.filter}"`;
   }

@@ -1,0 +1,26 @@
+{
+    "name": "The Movie Test",
+    "short_name": "Movies",
+    "description": "List of popular movies",  
+    "icons": [{
+      "src": "assets/icon.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      }, {
+        "src": "assets/icon.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }, {
+        "src": "assets/icon.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }, {
+        "src": "assets/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#212121"
+  }

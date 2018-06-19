@@ -42,7 +42,6 @@ export class DetailsPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._favoriteService.favorites.subscribe(favs => console.log(favs));
   }
 
   back() {
