@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef, MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-search-dialog',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchDialogComponent implements OnInit {
 
-  constructor() { }
+  filter: string;
+
+  constructor(
+    private ref: MatDialogRef<SearchDialogComponent>,
+    private snackBar: MatSnackBar
+  ) { }
 
   ngOnInit() {
+  }
+
+  search() {
+    this.ref.close();
   }
 
 }

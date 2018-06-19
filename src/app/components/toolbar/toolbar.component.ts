@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  title: string;
+  @Input()
+  backEnable: boolean;
+
+  constructor(private _location: Location) { }
 
   ngOnInit() {
+  }
+
+  back() {
+    this._location.back();
   }
 
 }

@@ -16,6 +16,7 @@ import { HttpModule } from '@angular/http';
 import { DetailsPageComponent } from './pages/details-page/details-page/details-page.component';
 import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { ResultPageComponent } from './pages/result-page/result-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ToolbarComponent,
     HomePageComponent,
     DetailsPageComponent,
-    SearchDialogComponent
+    SearchDialogComponent,
+    ResultPageComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,14 @@ export class MovieService {
       });
   }
 
+  searchMovie(filter: string) {
+    return this.http
+      .get(`${environment.baseUrl}/search/movie?api_key=${environment.apiKey}&query="${filter}"`, { headers: this.getHeaders() })
+      .map(res => {
+        return res.json();
+      });
+  }
+
   private getHeaders() {
     let headers = new Headers();
     return headers;

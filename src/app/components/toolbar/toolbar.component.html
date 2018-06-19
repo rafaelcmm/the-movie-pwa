@@ -1,3 +1,4 @@
 <mat-toolbar color="primary" class="mat-elevation-z2">
-  <span>The Best Movies</span>
+  <button [style.marginRight]="'4px'" (click)="back()" *ngIf="backEnable" mat-icon-button><mat-icon>arrow_back</mat-icon></button>
+  <span>{{ title }}</span>
 </mat-toolbar>

@@ -1,3 +1,6 @@
-<p>
-  search-dialog works!
-</p>
+<mat-form-field color="accent">
+  <input [(ngModel)]="filter" name="filter" matInput type="text" placeholder="Movie's name">
+</mat-form-field>
+<div class="btn">
+  <button (click)="search()" [routerLink]="'movie/search/' + filter" mat-button color="primary">Search Now!</button>
+</div>
