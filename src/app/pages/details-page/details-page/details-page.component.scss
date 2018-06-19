@@ -2,13 +2,17 @@
     position: absolute;
     left: 0;
     top: 0;
-    
     img {
         width: 100%;
     }
 }
 
-
+button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+}
 
 .content {
     position: relative;
