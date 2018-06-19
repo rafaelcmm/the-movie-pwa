@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { Jsonp } from '@angular/http/src/http';
+import { JsonpModule } from '@angular/http';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MaterialModule,
     FormsModule,
     InfiniteScrollModule,
+    JsonpModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
