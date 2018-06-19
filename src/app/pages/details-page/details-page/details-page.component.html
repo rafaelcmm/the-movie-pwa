@@ -3,12 +3,12 @@
   <div class="img-container">
     <img [src]="imgPath + movie.backdrop_path">
     <div class="content">
-      <mat-card-title>{{ movie.original_title }}</mat-card-title><br>
-      <mat-card-subtitle>"{{ movie.tagline }}" - <b>{{ movie.vote_average }}</b></mat-card-subtitle><br><br>
-      <div>Released at: {{ movie.release_date }}</div>
-      <div>Revenue: ${{ movie.revenue.toLocaleString('en-US') }}</div>
+      <mat-card-title>{{ movie.original_title || 'No title' }}</mat-card-title><br>
+      <mat-card-subtitle>"{{ movie.tagline || 'No subtitle' }}" - <b>{{ movie.vote_average || 'N/A' }}</b></mat-card-subtitle><br><br>
+      <div>Released at: {{ movie.release_date || 'No data' }}</div>
+      <div>Revenue: ${{ movie.revenue.toLocaleString('en-US') || 'No data'}}</div>
       <h3>Synopsis</h3>
-      <p align="justify"><i>{{ movie.overview }}</i></p>
+      <p align="justify"><i>{{ movie.overview || 'No data'}}</i></p>
     </div>
   </div>
 </div>

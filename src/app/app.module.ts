@@ -15,6 +15,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpModule } from '@angular/http';
 import { DetailsPageComponent } from './pages/details-page/details-page/details-page.component';
 import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,11 @@ import { SearchDialogComponent } from './components/search-dialog/search-dialog.
     BrowserAnimationsModule,
     HttpModule,
     MaterialModule,
+    FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+  ],
+  entryComponents: [
+    SearchDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
