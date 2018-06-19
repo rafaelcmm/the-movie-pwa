@@ -5,7 +5,7 @@
   <div class="img-container">
     <img [src]="movie.backdrop_path ? imgPath + movie.backdrop_path : '../../assets/img/noimage.jpg'">
     <div class="content">
-      <button mat-icon-button class="star" [color]="favorite ? 'accent' : 'primary'" (click)="toggleFavorite()"><mat-icon>star</mat-icon></button>
+      <button mat-icon-button class="star" [color]="favorite ? 'accent' : 'primary'" (click)="favoriteIt()"><mat-icon>star</mat-icon></button>
       <mat-card-title>
         {{ movie.original_title || 'No title' }}
       </mat-card-title>

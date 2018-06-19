@@ -15,6 +15,7 @@ export class HomePageComponent implements OnInit {
   imgPath: string = 'https://image.tmdb.org/t/p/w500/';
   movies: any[] = [];
   page = 1;
+  favorites: any[] = [];
 
   constructor(
     private _movieService: MovieService,
@@ -23,7 +24,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     this._movieService.getMovies(this.page).subscribe(movies => this.movies = movies.results);
-    this._favoriteService.favorites.subscribe(favs => console.log(favs));
+    this._favoriteService.favorites.subscribe(favs => this.favorites = favs);
   }
 
   onScroll() {

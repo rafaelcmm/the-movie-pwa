@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../../../services/movie/movie.service';
 import {Location} from '@angular/common';
 import { FavoriteService } from '../../../services/favorite/favorite.service';
+import { MatSnackBar } from '@angular/material';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class DetailsPageComponent implements OnInit {
     private route: ActivatedRoute,
     private _movieService: MovieService,
     private _location: Location,
-    private _favoriteService: FavoriteService
+    private _favoriteService: FavoriteService,
+    private snackBar: MatSnackBar
   ) { 
     this.id = this.route.snapshot.paramMap.get('id');
     this._movieService.getMovie(this.id).subscribe(movie => this.movie = movie);
@@ -32,9 +34,11 @@ export class DetailsPageComponent implements OnInit {
     return this.movie.revenue.toLocaleString('en-US')
   }
 
-  toggleFavorite() {
+  favoriteIt() {
     this._favoriteService.push(this.movie);
-    this.favorite = !this.favorite;
+    this.snackBar.open('Added to your `the best` list', 'OK', {
+      duration: 2000
+    });
   }
 
   ngOnInit() {
