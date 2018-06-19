@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$_primary: mat-palette($mat-gray, 900);
+$_accent:  mat-palette($mat-green, 400);
+$_warn:    mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($_primary, $_accent, $_warn);
+
+$primary: mat-color($_primary);
+$accent:  mat-color($_accent);
+$warn:    mat-color($_warn);
+
+@include angular-material-theme($candy-app-theme);

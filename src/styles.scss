@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'theme.scss';
+
+html,
+body {
+    background: #EAEAEA;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
