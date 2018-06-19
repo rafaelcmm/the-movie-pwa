@@ -1,14 +1,26 @@
 <div class="container">
-  <button class="mat-elevation-z8" (click)="back()" color="primary" mat-mini-fab><mat-icon>arrow_back</mat-icon></button>
+  <button class="mat-elevation-z8 back" (click)="back()" color="primary" mat-mini-fab>
+    <mat-icon>arrow_back</mat-icon>
+  </button>
   <div class="img-container">
     <img [src]="movie.backdrop_path ? imgPath + movie.backdrop_path : '../../assets/img/noimage.jpg'">
     <div class="content">
-      <mat-card-title>{{ movie.original_title || 'No title' }}</mat-card-title><br>
-      <mat-card-subtitle>"{{ movie.tagline || 'No subtitle' }}" - <b>{{ movie.vote_average || 'N/A' }}</b></mat-card-subtitle><br><br>
+      <button mat-icon-button class="star" [color]="favorite ? 'accent' : 'primary'" (click)="toggleFavorite()"><mat-icon>star</mat-icon></button>
+      <mat-card-title>
+        {{ movie.original_title || 'No title' }}
+      </mat-card-title>
+      <br>
+      <mat-card-subtitle>"{{ movie.tagline || 'No subtitle' }}" -
+        <b>{{ movie.vote_average || 'N/A' }}</b>
+      </mat-card-subtitle>
+      <br>
+      <br>
       <div>Released at: {{ movie.release_date || 'No data' }}</div>
       <div>Revenue: ${{ revenue || 'No data'}}</div>
       <h3>Synopsis</h3>
-      <p align="justify"><i>{{ movie.overview || 'No data'}}</i></p>
+      <p align="justify">
+        <i>{{ movie.overview || 'No data'}}</i>
+      </p>
     </div>
   </div>
 </div>

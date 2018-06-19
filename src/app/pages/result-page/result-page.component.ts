@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie/movie.service';
 import { ActivatedRoute } from '@angular/router';
 import { ViewChild } from '@angular/core';
-import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { Router } from '@angular/router';
 
 
@@ -10,8 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-result-page',
   templateUrl: './result-page.component.html',
   styleUrls: ['./result-page.component.scss'],
-  providers: [MovieService],
-  entryComponents: [SearchBarComponent]
+  providers: [MovieService]
 })
 export class ResultPageComponent implements OnInit {
   imgPath: string = 'https://image.tmdb.org/t/p/w500/';

@@ -21,8 +21,6 @@ import { ResultPageComponent } from './pages/result-page/result-page.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Jsonp } from '@angular/http/src/http';
 import { JsonpModule } from '@angular/http';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
-
 
 @NgModule({
   declarations: [
@@ -31,8 +29,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     HomePageComponent,
     DetailsPageComponent,
     SearchDialogComponent,
-    ResultPageComponent,
-    SearchBarComponent
+    ResultPageComponent
   ],
   imports: [
     BrowserModule,

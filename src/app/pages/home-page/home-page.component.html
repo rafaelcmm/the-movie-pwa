@@ -1,6 +1,11 @@
 <div class="toolbar-container">
-  <app-toolbar [title]="'The Best Movies'"></app-toolbar>
+  <app-toolbar [title]="'Movies'"></app-toolbar>
 </div>
-<div class="images" infiniteScroll (scrolled)="onScroll()" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500">
-  <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of movies" [src]="imgPath + movie.poster_path">
-</div>
+<mat-tab-group>
+  <mat-tab label="Most Popular">
+    <div class="images" infiniteScroll (scrolled)="onScroll()" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500">
+      <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of movies" [src]="imgPath + movie.poster_path">
+    </div>
+  </mat-tab>
+  <mat-tab label="Favorites"> Content 2 </mat-tab>
+</mat-tab-group>

@@ -13,6 +13,7 @@ import {Location} from '@angular/common';
 export class DetailsPageComponent implements OnInit {
   id: string;
   movie: any = {};
+  favorite: boolean;
   imgPath: string = 'https://image.tmdb.org/t/p/w500/';
   
   constructor(
@@ -22,10 +23,15 @@ export class DetailsPageComponent implements OnInit {
   ) { 
     this.id = this.route.snapshot.paramMap.get('id');
     this._movieService.getMovie(this.id).subscribe(movie => this.movie = movie);
+    this.favorite = false;
   }
 
   get revenue() {
     return this.movie.revenue.toLocaleString('en-US')
+  }
+
+  toggleFavorite() {
+    this.favorite = !this.favorite;
   }
 
   ngOnInit() {
