@@ -14,13 +14,15 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpModule } from '@angular/http';
 import { DetailsPageComponent } from './pages/details-page/details-page/details-page.component';
+import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     HomePageComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
+    SearchDialogComponent
   ],
   imports: [
     BrowserModule,
