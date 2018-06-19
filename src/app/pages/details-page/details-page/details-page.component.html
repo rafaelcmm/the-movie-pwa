@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="img-container">
+    <img [src]="imgPath + movie.backdrop_path">
+    <div class="content">
+      <mat-card-title>{{ movie.original_title }}</mat-card-title><br>
+      <mat-card-subtitle>"{{ movie.tagline }}" - <b>{{ movie.vote_average }}</b></mat-card-subtitle><br><br>
+      <div>Released at: {{ movie.release_date }}</div>
+      <div>Revenue: ${{ movie.revenue.toLocaleString('en-US') }}</div>
+      <h3>Synopsis</h3>
+      <p align="justify"><i>{{ movie.overview }}</i></p>
+    </div>
+  </div>
+</div>

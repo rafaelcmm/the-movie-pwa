@@ -1,3 +1,6 @@
+<div class="toolbar-container">
+  <app-toolbar></app-toolbar>
+</div>
 <div class="images">
-  <img class="mat-elevation-z4" *ngFor="let movie of movies" [src]="imgPath + movie.poster_path">    
+  <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of movies" [src]="imgPath + movie.poster_path">    
 </div>

@@ -13,20 +13,19 @@ import { MaterialModule } from './modules/material/material.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpModule } from '@angular/http';
-
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { DetailsPageComponent } from './pages/details-page/details-page/details-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    HomePageComponent
+    HomePageComponent,
+    DetailsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
     HttpModule,
     MaterialModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })

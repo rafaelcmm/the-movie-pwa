@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule,
          MatCheckboxModule, 
          MatToolbarModule,
-         MatCardModule} from '@angular/material';
+         MatCardModule,
+         MatListModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -11,13 +12,15 @@ import { MatButtonModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   exports: [
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   declarations: []
 })
