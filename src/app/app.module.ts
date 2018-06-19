@@ -22,6 +22,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Jsonp } from '@angular/http/src/http';
 import { JsonpModule } from '@angular/http';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,8 @@ import { JsonpModule } from '@angular/http';
     InfiniteScrollModule,
     JsonpModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
