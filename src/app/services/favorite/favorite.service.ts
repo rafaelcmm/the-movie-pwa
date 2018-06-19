@@ -12,4 +12,8 @@ export class FavoriteService {
   ) {
     this.favorites = this.db.list('/starred').valueChanges();
   }
+
+  push(data) {
+    this.db.object(`/starred/${data.id}`).set(data);
+  }
 }
