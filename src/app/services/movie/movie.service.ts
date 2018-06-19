@@ -9,9 +9,9 @@ export class MovieService {
 
   constructor(private http: Http) { }
 
-  getMovies() {
+  getMovies(page: number) {
     return this.http
-      .get(`${environment.baseUrl}/movie/popular?api_key=${environment.apiKey}&language=en-US&page=1`, { headers: this.getHeaders() })
+      .get(`${environment.baseUrl}/movie/popular?api_key=${environment.apiKey}&language=en-US&page=${page}`, { headers: this.getHeaders() })
       .map(res => {
         return res.json();
       });

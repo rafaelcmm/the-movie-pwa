@@ -18,6 +18,9 @@ import { SearchDialogComponent } from './components/search-dialog/search-dialog.
 import { FormsModule } from '@angular/forms';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,7 @@ import { ResultPageComponent } from './pages/result-page/result-page.component';
     HttpModule,
     MaterialModule,
     FormsModule,
+    InfiniteScrollModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
