@@ -15,12 +15,13 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpModule } from '@angular/http';
 import { DetailsPageComponent } from './pages/details-page/details-page/details-page.component';
 import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Jsonp } from '@angular/http/src/http';
 import { JsonpModule } from '@angular/http';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { JsonpModule } from '@angular/http';
     HomePageComponent,
     DetailsPageComponent,
     SearchDialogComponent,
-    ResultPageComponent
+    ResultPageComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { JsonpModule } from '@angular/http';
     FormsModule,
     InfiniteScrollModule,
     JsonpModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
