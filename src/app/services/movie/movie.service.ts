@@ -25,9 +25,9 @@ export class MovieService {
       });
   }
 
-  searchMovie(filter: string) {
+  searchMovie(filter: string, page: number) {
     return this.jsonp
-      .request(`${environment.baseUrl}/search/movie?api_key=${environment.apiKey}&query="${filter}"&callback=JSONP_CALLBACK`)
+      .request(`${environment.baseUrl}/search/movie?api_key=${environment.apiKey}&query="${filter}"&page=${page}&callback=JSONP_CALLBACK`)
       .map(res => {
         return res.json();
       });

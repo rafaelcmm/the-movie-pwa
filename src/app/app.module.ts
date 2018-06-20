@@ -22,13 +22,15 @@ import { JsonpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     HomePageComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,

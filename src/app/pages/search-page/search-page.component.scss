@@ -1,0 +1,19 @@
+.search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0 !important;
+    height: 54px;
+}
+
+img {
+    display: inline-block;
+    margin: 6px;
+    width: 46%;
+    cursor: pointer;
+}
+
+mat-form-field {
+    width: 100%;
+}

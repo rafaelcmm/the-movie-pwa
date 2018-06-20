@@ -1,0 +1,10 @@
+<mat-toolbar class="search mat-elevation-z2">
+  <button routerLink="/" mat-icon-button color="primary"><mat-icon>arrow_back</mat-icon></button>
+  <mat-form-field>
+    <input matInput [formControl]="filter" placeholder="Search here..." type="text">
+  </mat-form-field>
+</mat-toolbar>
+<mat-card-subtitle *ngIf="filter.value && filter.value !== ''" >Showing results for "{{ filter.value }}"</mat-card-subtitle>
+<div class="images" infiniteScroll (scrolled)="onScroll()" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="40">
+  <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of movies" [src]="movie.poster_path ? imgPath + movie.poster_path : '../../assets/img/no-image.png'">
+</div>
