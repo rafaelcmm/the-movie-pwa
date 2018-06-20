@@ -24,7 +24,7 @@ Este projeto foi desenvolvido com a ferramenta 'angular-cli'. Dito isso, para si
 
 Para simular o ambiente em um servidor, deve-se seguir estes passos:
 
-    1. Executar o comando `npm install --g http-server`
+    1. Executar o comando `npm install -g http-server`
     2. Na pasta do projeto, executar o comando `npm build --prod --aot`
     3. Na pasta dist que foi gerada, executar o comando `http-server`.
        No console poderá ser visto o host e porta necessários para acesso.
