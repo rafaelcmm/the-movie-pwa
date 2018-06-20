@@ -14,9 +14,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpModule } from '@angular/http';
 import { DetailsPageComponent } from './pages/details-page/details-page/details-page.component';
-import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ResultPageComponent } from './pages/result-page/result-page.component';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Jsonp } from '@angular/http/src/http';
@@ -30,9 +28,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AppComponent,
     ToolbarComponent,
     HomePageComponent,
-    DetailsPageComponent,
-    SearchDialogComponent,
-    ResultPageComponent
+    DetailsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +45,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
-    SearchDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

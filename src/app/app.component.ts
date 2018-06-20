@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +13,5 @@ export class AppComponent {
     private dialog: MatDialog
   ) {
 
-  }
-
-  openDialog() {
-    const ref = this.dialog.open(SearchDialogComponent, {
-      width: '400px'
-    });
   }
 }
