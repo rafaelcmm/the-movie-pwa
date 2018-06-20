@@ -12,7 +12,7 @@ import * as _ from 'lodash';
   styleUrls: ['./search-page.component.scss'],
   providers: [MovieService]
 })
-export class SearchPageComponent implements OnInit, OnDestroy {
+export class SearchPageComponent implements OnInit {
 
   filter: FormControl;
   movies = [];
@@ -30,11 +30,6 @@ export class SearchPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.filterSubscription = this._filterSubscription();
-  }
-
-  ngOnDestroy() {
-    if (this.movieSubscription) this.filterSubscription.unsubscribe();
-    if (this.movieSubscription) this.movieSubscription.unsubscribe();
   }
 
   onScroll() {
