@@ -10,10 +10,11 @@
     </div>
   </mat-tab>
   <mat-tab label="Favorites">
-    <div class="images">
+    <div class="images" *ngIf="connStatus">
       <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of favorites" [errorImage]="'../../assets/img/no-image.png'"
         [lazyLoad]="imgPath + movie.poster_path"
         [offset]="0">
     </div>
+    <mat-card-subtitle *ngIf="!connStatus" [style.textAlign]="'center'">Please check your internet connection to load your favs!</mat-card-subtitle>
   </mat-tab>
 </mat-tab-group>

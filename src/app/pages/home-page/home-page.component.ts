@@ -17,6 +17,8 @@ export class HomePageComponent implements OnInit {
   page = 1;
   favorites: any[] = [];
 
+  connStatus: boolean = navigator.onLine;
+
   constructor(
     private _movieService: MovieService,
     private _favoriteService: FavoriteService

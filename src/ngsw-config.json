@@ -20,7 +20,20 @@
     "resources": {
       "files": [
         "/assets/**"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/**"
       ]
+    }
+  }],
+  "dataGroups": [{
+    "name": "movies-api",
+    "urls": ["/movie", "/search"],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": "1h",
+      "timeout": "5s"
     }
   }]
 }
