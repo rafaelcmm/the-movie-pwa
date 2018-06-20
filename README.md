@@ -78,3 +78,5 @@ de melhoria que vejo onde o código poderia ser melhorado:
 A aplicação foi hospedada em um domínio de minha propriedade, e pode ser encontrada na url https://www.kips.com.br. 
 
 OBS: A aplicação foi desenvolvida apenas para o viewport exclusivamente de dispositívos mobile, apenas para fins de demonstração. Não considerei a utilização em Desktops e Tablets.
+
+Obrigado pela atenção!
