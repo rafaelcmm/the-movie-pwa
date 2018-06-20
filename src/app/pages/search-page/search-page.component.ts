@@ -33,8 +33,8 @@ export class SearchPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.filterSubscription.unsubscribe();
-    this.movieSubscription.unsubscribe();
+    if (this.movieSubscription) this.filterSubscription.unsubscribe();
+    if (this.movieSubscription) this.movieSubscription.unsubscribe();
   }
 
   onScroll() {
