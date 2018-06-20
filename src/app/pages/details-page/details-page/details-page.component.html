@@ -1,11 +1,11 @@
 <div class="container">
   <button class="mat-elevation-z8 back" routerLink="/" color="primary" mat-mini-fab>
-    <mat-icon>arrow_back</mat-icon>
+    <i class="material-icons">arrow_back</i>
   </button>
   <div class="img-container">
     <img [src]="movie.backdrop_path ? imgPath + movie.backdrop_path : '../../assets/img/noimage.jpg'">
     <div class="content">
-      <button mat-icon-button class="star" [color]="favorite ? 'accent' : 'primary'" (click)="favoriteIt()"><mat-icon>star</mat-icon></button>
+      <button mat-icon-button class="star" [color]="favorite ? 'accent' : 'primary'" (click)="favoriteIt()"><i class="material-icons">star</i></button>
       <mat-card-title>
         {{ movie.original_title || 'No title' }}
       </mat-card-title>
