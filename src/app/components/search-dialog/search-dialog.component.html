@@ -2,5 +2,5 @@
   <input [(ngModel)]="fill" name="filter" matInput type="text" placeholder="Movie's name">
 </mat-form-field>
 <div class="btn">
-  <button (click)="search()" mat-button color="primary">Search Now!</button>
+  <button routerLink="/search/{{ fill }}" mat-button color="primary">Search Now!</button>
 </div>

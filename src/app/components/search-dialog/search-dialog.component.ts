@@ -20,9 +20,4 @@ export class SearchDialogComponent implements OnInit {
   ngOnInit() {
   }
 
-  search() {
-    this.ref.close();
-    this._location.go(`movies/search/${this.fill}`);
-  }
-
 }
