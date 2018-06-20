@@ -12,7 +12,7 @@ import { FavoriteService } from '../../services/favorite/favorite.service';
 })
 export class HomePageComponent implements OnInit {
 
-  imgPath: string = 'https://image.tmdb.org/t/p/w500/';
+  imgPath: string = 'https://image.tmdb.org/t/p/w185';
   movies: any[] = [];
   page = 1;
   favorites: any[] = [];

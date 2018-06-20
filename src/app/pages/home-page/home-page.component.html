@@ -5,13 +5,15 @@
   <mat-tab label="Most Popular">
     <div class="images" infiniteScroll (scrolled)="onScroll()" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500">
       <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of movies" [defaultImage]="'../../assets/img/no-image.png'"
-        [lazyLoad]="imgPath + movie.poster_path">
+        [lazyLoad]="imgPath + movie.poster_path"
+        [offset]="200">
     </div>
   </mat-tab>
   <mat-tab label="Favorites">
     <div class="images">
       <img [routerLink]="'/movie/' + movie.id" class="mat-elevation-z4" *ngFor="let movie of favorites" [defaultImage]="'../../assets/img/no-image.png'"
-        [lazyLoad]="imgPath + movie.poster_path">
+        [lazyLoad]="imgPath + movie.poster_path"
+        [offset]="200">
     </div>
   </mat-tab>
 </mat-tab-group>

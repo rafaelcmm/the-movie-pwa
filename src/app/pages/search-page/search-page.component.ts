@@ -19,7 +19,7 @@ export class SearchPageComponent implements OnInit {
   filterSubscription: Subscription;
   movieSubscription: Subscription;
 
-  imgPath: string = 'https://image.tmdb.org/t/p/w500/';
+  imgPath: string = 'https://image.tmdb.org/t/p/w185';
   page = 1;
 
   constructor(
@@ -43,7 +43,7 @@ export class SearchPageComponent implements OnInit {
       .subscribe(value => {
         this.movies = [];
         this.page = 1;
-        this.movieSubscription = this._movieService.searchMovie(value, this.page).subscribe(movies => this.movies = _.concat(this.movies, movies.results));
+        if (value && value !== '') this.movieSubscription = this._movieService.searchMovie(value, this.page).subscribe(movies => this.movies = _.concat(this.movies, movies.results));
       });
   }
 }
