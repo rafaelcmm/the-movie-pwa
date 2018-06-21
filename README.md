@@ -34,14 +34,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Análise de dados de auditoria
 
-[Imagem 1]
+!(https://imgur.com/a/phh9Eh0)
 
 Utilizando a auditoria das ferramentas de desenvolvimento do Google Chrome, foi possível observar os seguintes dados em relação a performance, boas práticas e
 funcionalidade como PWA.
 
 PWA: 100 | Boas Práticas: 100 | Performance: **70**
 
-[Imagem 2]
+!(https://imgur.com/a/LGpKShY)
 
 As ocorrencias que vieram a atrapalhar o desempenho de performance da aplicação provieram especialmente de duas fontes. O carregamento Lazy Load das imagens, que atrasou
 em cerca de 1 segundo o inicio da aplicação, e o carregamento dos arquivos gerados pelo build do angular. Devido a escolha de tecnologia, infelizmente não foi encontrado
