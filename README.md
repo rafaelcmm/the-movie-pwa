@@ -39,7 +39,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Utilizando a auditoria das ferramentas de desenvolvimento do Google Chrome, foi possível observar os seguintes dados em relação a performance, boas práticas e
 funcionalidade como PWA.
 
-PWA: 100 | Boas Práticas: 100 | Performance: **70**
+PWA: 100 | Boas Práticas: 100 | Performance: **72**
 
 ![audit2](audit2.PNG)
 
@@ -48,7 +48,7 @@ em cerca de 1 segundo o inicio da aplicação, e o carregamento dos arquivos ger
 workaround para os 800ms de atraso devido aos arquivos. Foi utilizada uma biblioteca de lazy load que otimizou o carregamento das imagens, porém deve ser estudado com 
 mais calma o método adequado.
 
-*A nota `70` em performance é considerada uma nota relativamente ok, e o tempo de renderização ficou em média entre 3 à 4 segundos, o que é um tempo aceitavel devido as circunstancias.*
+*A nota `72` em performance é considerada uma nota relativamente ok, e o tempo de renderização ficou em média entre 3 à 4 segundos, o que é um tempo aceitavel devido as circunstancias.*
 
 Os requisitos de PWA e Boas Práticas foram satisfatórios
 
