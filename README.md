@@ -28,9 +28,6 @@ Para simular o ambiente em um servidor, deve-se seguir estes passos:
     2. Na pasta do projeto, executar o comando `npm build --prod --aot`
     3. Na pasta dist que foi gerada, executar o comando `http-server`.
        No console poderá ser visto o host e porta necessários para acesso.
-    
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Análise de dados de auditoria
 
